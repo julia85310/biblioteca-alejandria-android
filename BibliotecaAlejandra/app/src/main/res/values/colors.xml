@@ -14,5 +14,6 @@
     <color name="dark_seashell">#F9EEE8</color>
     <color name="dark_alice_blue">#E4E9E8</color>
     <color name="chamoise">#957261</color>
+    <color name="chamoiseTransparent">#3C957261</color>
     <color name="ecru">#D7AF70</color>
 </resources>
