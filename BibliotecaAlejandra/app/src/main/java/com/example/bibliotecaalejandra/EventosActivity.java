@@ -36,6 +36,7 @@ public class EventosActivity extends AppCompatActivity {
                 .build();
 
         ApiService apiService = retrofit.create(ApiService.class);
+        User.init(getApplicationContext(), apiService);
 
         // Llamada a la API
         Call<List<Evento>> call = apiService.getEventos();

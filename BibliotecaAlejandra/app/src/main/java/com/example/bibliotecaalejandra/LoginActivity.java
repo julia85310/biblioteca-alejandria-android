@@ -105,8 +105,12 @@ public class LoginActivity extends AppCompatActivity {
                             userResponse.getNumMaxLibros()
                             );
 
-                    Intent intent = new Intent(LoginActivity.this, PerfilActivity.class);
-                    startActivity(intent);
+                    if(User.isAdmin()){
+                        Toast.makeText(LoginActivity.this, "Los admin no pueden logearse en la versión móvil.", Toast.LENGTH_SHORT).show();
+                    }else{
+                        Intent intent = new Intent(LoginActivity.this, PerfilActivity.class);
+                        startActivity(intent);
+                    }
                 } else {
                     Toast.makeText(LoginActivity.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
                 }
