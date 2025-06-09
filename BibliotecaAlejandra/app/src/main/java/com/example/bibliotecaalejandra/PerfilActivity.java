@@ -61,11 +61,6 @@ public class PerfilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_perfil);
 
         crearCanalDeNotificaciones();
-        findViewById(R.id.testButton).setOnClickListener(v -> {
-            Intent intent = new Intent(PerfilActivity.this, RecordatorioReceiver.class);
-            intent.putExtra("mensaje", "Test manual");
-            sendBroadcast(intent);
-        });
 
         db = AppDatabase.getInstance(this);
         notificacionDao = db.notificacionDao();
